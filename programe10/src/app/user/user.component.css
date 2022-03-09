@@ -1,0 +1,30 @@
+
+span{
+    color: red;
+}
+.content{
+    max-width: 500px;
+    margin:auto;
+    background-color: powderblue;
+    padding: 2% 2%;
+
+}
+h1{
+    text-align: center;
+    color:purple;
+}
+form{
+    text-align:center;
+}
+input{
+    margin: auto;
+    height: 25px;
+    width: auto;
+}
+button{
+    margin-left: auto;
+    border-radius: 3px;
+    font-size: 20px;
+    color:royalblue;
+    background-color:pink;
+}

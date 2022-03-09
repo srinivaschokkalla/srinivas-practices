@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<html>
+  <body>
+<div class="container">
+  <h1>User Details</h1>
+    <form class="content" [formGroup]="loginForm"  (ngSubmit)="loginUser()">
+     UserName <input type="text" placeholder="Enter name" formControlName="user">
+      <br>
+      <span *ngIf="user&&user.invalid&&user.touched">User input filled is not valid</span>
+      <br>
+      <br>
+     Password <input type="password" placeholder="Enter password"formControlName="password">
+      <br>
+      <span *ngIf="password&&password.invalid&&password.touched">password input filled is not valid</span>
+      <br>
+     First Name <input type="firstname" placeholder="firstname" formControlName="firstname">
+     <br>
+      <span *ngIf="firstname&&firstname.invalid&&firstname.touched">firstname input filled is not valid</span>
+      <br><br>
+    LastName <input type="lastname" placeholder="lastname" formControlName="lastname">
+    <br>
+    <span *ngIf="lastname&&lastname.invalid&&lastname.touched">lastname input filled is not valid</span>
+    <br><br>
+    Select Gender <input type="radio" name="Gender" value="Male">Male
+                  <input type="radio" name="Gender" value="Female"> Female
+      <br><br>
+      Select Hobbies  <input type="checkbox" name="name" value="Dancing">Dancing
+      <input type="checkbox" name="name" value="Playing">Playing
+      <input type="checkbox" name="name" value="Reading">Reading
+      <br><br>
+      <button [disabled]="loginForm.invalid">Login</button>
+    </form>
+    </div>
+    </body>
+    </html>

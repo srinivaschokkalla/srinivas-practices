@@ -1,0 +1,16 @@
+<h2>Employee details</h2>
+<ul *ngFor="let employee of employees">
+  <li>{{employee.id}}.{{employee.name}}-{{employee.age}}</li>
+</ul>
+<input [id]="myId" type="text" value="srinivas">
+<input bind-disabled="isDisabled" id="{{myId}}" value="srinivas">
+<h2 [style.color]="hasError ? 'red':'green'">style binding</h2>
+<h2 [style.color]="highlightColor">Style Binding2</h2>
+<h2 [ngStyle]="titleStyle">StyleBinding 3</h2>
+<h2 class="text-success" [class]="successClass">codevolution</h2>
+<h2 [class.text-danger]="hasError">srinivas</h2>
+<h2 [ngClass]="messageClasses">srinvias</h2>
+{{greeting}}
+<input #myInput type="text">
+<input [(ngModel)]="name" type="text">
+{{name}}
