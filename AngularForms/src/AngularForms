@@ -1,0 +1,8 @@
+Template Driven: more code in HTML
+FormsModule
+1. ngForm=> instance of FormGroup=> represent group of controls=> fromGroup=> FormControl=> text
+#
+ngModel
+Reactive Form: More code in .ts file
+FormGroup
+FormArray=> add controls dynamically
