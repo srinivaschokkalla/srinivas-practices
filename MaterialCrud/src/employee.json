@@ -1,0 +1,79 @@
+{
+  "Employee": [
+    {
+      "id": 1,
+      "name": "Mayura",
+      "designation": "Trainer",
+      "department": "Soft Eng",
+      "gender": "Female",
+      "sales": "Achieved"
+    },
+    {
+      "id": 3,
+      "name": "James",
+      "designation": "Escalation Manager",
+      "department": "Support",
+      "gender": "Male",
+      "sales": "Achieved"
+    },
+    {
+      "id": 4,
+      "name": "Smitha",
+      "designation": "Data Testing Engineer",
+      "department": "DTS",
+      "gender": "Female",
+      "sales": "Achieved"
+    },
+    {
+      "id": 5,
+      "name": "Swathi",
+      "designation": "Tech Lead",
+      "department": "Soft Eng",
+      "gender": "Female",
+      "sales": "Achieved"
+    },
+    {
+      "name": "Amit Sonar",
+      "designation": "Soft Developer",
+      "department": "Technology",
+      "gender": "Male",
+      "sales": "Achieved",
+      "id": 6
+    },
+    {
+      "name": "m@gmail.com",
+      "designation": "fgfdg",
+      "department": "gfdg",
+      "gender": "m",
+      "id": 7
+    },
+    {
+      "name": "dsfdsf",
+      "designation": "fdsfds",
+      "department": "fdf",
+      "gender": "male",
+      "id": 8
+    },
+    {
+      "name": "Anagha",
+      "designation": "Manager",
+      "department": "Dev",
+      "gender": "Female",
+      "id": 9
+    },
+    {
+      "name": "Shilpa",
+      "designation": "Lead",
+      "department": "DT",
+      "gender": "Female",
+      "id": 10
+    },
+    {
+      "name": "rewr",
+      "designation": "rwer",
+      "department": "werew",
+      "gender": "werwe",
+      "id": 11
+    }
+  ]
+}
