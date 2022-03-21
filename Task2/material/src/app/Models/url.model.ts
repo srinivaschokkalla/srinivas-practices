@@ -1,17 +1,11 @@
-export class Employee
-{
-    id:number;
+export class Report {
+    id: number;
     from: string;
-    to:string;
-    dateCreated:string;
-    permanentLink: true;
+    to: string;
+    dateCreated: Date;
+    permanentLink:boolean;
 
-
-    constructor(id:number,
-        from: string,
-        to:string,
-        dateCreated:string,
-        permanentLink: true)
+    constructor(id:number,from:string,to:string,dateCreated:Date,permanentLink:boolean)
     {
         this.id=id;
         this.from=from;
