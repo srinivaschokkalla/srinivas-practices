@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Report } from '../Models/url.model';
+import { Report } from '../Models/url';
 import { UrlserviceService } from '../urlservice.service';
 @Component({
   selector: 'app-edit',
@@ -13,7 +13,7 @@ export class EditComponent implements OnInit {
   ReportForm: FormGroup;
   report:Report;
   
-  constructor(private UrlSevice: UrlserviceService,private route: Router, private formBuilder: FormBuilder,private router:ActivatedRoute) {
+  constructor(private UrlserviceService: UrlserviceService,private route: Router, private formBuilder: FormBuilder,private router:ActivatedRoute) {
        
      }
   
@@ -32,7 +32,7 @@ export class EditComponent implements OnInit {
 
   public getReportDetailsById(id:number):void
   {
-   this.UrlSevice.getReportById(id).subscribe((data: any)=>{
+   this.UrlserviceService.getReportById(id).subscribe(data=>{
      this.report=data
      this.patchReportDetails(data)
    });
@@ -52,7 +52,7 @@ export class EditComponent implements OnInit {
     public onFormSubmit(form: Report)
     {
       console.log(form);
-     this.UrlSevice.editReport(form).subscribe(response=>{
+     this.UrlserviceService.edit(form).subscribe(response=>{
        
       console.log(response);      
         this.route.navigate(['/list'])

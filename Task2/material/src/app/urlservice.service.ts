@@ -3,12 +3,15 @@ import { Injectable } from '@angular/core';
 import { catchError } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { throwError } from 'rxjs/internal/observable/throwError';
-import { Report } from './Models/url.model';
+import { Report } from './Models/url';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UrlserviceService {
+  getReportById(id: number) {
+    throw new Error('Method not implemented.');
+  }
   baseUrl='http://localhost:3000/Reports';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private http:HttpClient) { }
@@ -30,20 +33,20 @@ export class UrlserviceService {
   return this.http.get<Report[]>(this.baseUrl).pipe(catchError(this.handleError));
   }
 
-  public addReport(report:any):Observable<Report>{
+  public add(report:any):Observable<Report>{
     return this.http.post<Report>(this.baseUrl,report);
   }
 
-  public getReportById(id:number):Observable<Report>{
+  public getById(id:number):Observable<Report>{
     const url=`${this.baseUrl}/${id}`;
     return this.http.get<Report>(url).pipe(catchError(this.handleError));
   }
 
-  public deleteReport(id:number):Observable<Report>{
+  public delete(id:number):Observable<Report>{
     const url=`${this.baseUrl}/${id}`;
     return this.http.delete<Report>(url).pipe(catchError(this.handleError));
   }
-  public editReport(report:any):Observable<Report>{
+  public edit(report:any):Observable<Report>{
     const url=`${this.baseUrl}/${report.id}`;
     return this.http.put<Report>(url,report, { headers: this.headers }).pipe(catchError(this.handleError));
   }

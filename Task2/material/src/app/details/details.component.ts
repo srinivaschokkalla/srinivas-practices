@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { UrlserviceService } from '../urlservice.service';
-import { Report } from '../Models/url.model';
+import { Report } from '../Models/url';
 
 @Component({
   selector: 'app-details',
@@ -21,14 +21,14 @@ export class DetailsComponent implements OnInit {
   }
 
   public getReportDetailsById(id: number): void {
-    this.UrlSevice.getReportById(id).subscribe(data => {
+    this.UrlSevice.getById(id).subscribe(data => {
       this.report = data;
     });
   }
   public delete(id: number) {
-    this.UrlSevice.deleteReport(id).subscribe(response => {
+    this.UrlSevice.delete(id).subscribe(response => {
       console.log(response);
-      this.route.navigate(['reports-list']);
+      this.route.navigate(['list']);
     }, (error: any) => {
       console.log(error);
     })

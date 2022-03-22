@@ -15,6 +15,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import{   MatCheckboxModule} from '@angular/material/checkbox';
 import{  MatAutocompleteModule} from '@angular/material/autocomplete';
 //import { MatFormFieldControl } from '@angular/material/form-field';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 const materialComponents=[    
                       MatButtonModule,
@@ -32,6 +33,7 @@ const materialComponents=[
                       MatStepperModule,
                       MatCheckboxModule,
                       MatAutocompleteModule,
+                      MatPaginatorModule
                     // MatFormFieldControl,
 
 

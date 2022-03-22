@@ -9,11 +9,9 @@ import { UrlserviceService } from '../urlservice.service';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
-  ReportForm: FormGroup | undefined;
+  ReportForm: FormGroup;
   dailogtoggle:number=0;
-  UrlserviceService: any;
-  
-  constructor(private UrlService: UrlserviceService,private router: Router, private formBuilder: FormBuilder,private route: ActivatedRoute ) {
+  constructor(private UrlserviceService: UrlserviceService,private router: Router, private formBuilder: FormBuilder,private route: ActivatedRoute ) {
        
      }
   
@@ -34,7 +32,7 @@ export class AddComponent implements OnInit {
     {
       console.log(form);
      
-     this.UrlserviceService.addReport(form).subscribe(response=>{
+     this.UrlserviceService.add(form).subscribe(response=>{
        
       console.log(response);
         const id=response['id'];
