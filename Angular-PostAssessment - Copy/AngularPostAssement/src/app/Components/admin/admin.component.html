@@ -1,0 +1,66 @@
+<div class="example-container mat-elevation-z8">
+    <!-- <div class="example-loading-shade"
+         *ngIf="isDataloading">
+      <mat-spinner *ngIf="isDataloading"></mat-spinner>
+    </div> -->
+    <div class="button-row">
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="data" class="example-table"
+             matSort matSortActive="name" matSortDisableClear matSortDirection="asc">
+             <tr>
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef><strong>Id</strong></th>
+          <td mat-cell *matCellDef="let row">{{row.id}}</td>
+        </ng-container>&nbsp;&nbsp;
+        <ng-container matColumnDef="Name">
+          <th mat-header-cell *matHeaderCellDef><strong>Name</strong></th>
+          <td mat-cell *matCellDef="let row">{{row.Name}}</td>
+        </ng-container>
+    <ng-container matColumnDef="Genere">
+        <th mat-header-cell *matHeaderCellDef><strong>Genere</strong></th>
+        <td mat-cell *matCellDef="let row">{{row.Genere}}</td>
+      </ng-container>
+      <ng-container matColumnDef="AuthorName">
+        <th mat-header-cell *matHeaderCellDef><strong>AuthorName</strong></th>
+        <td mat-cell *matCellDef="let row">{{row.AuthorName}}</td>
+      </ng-container>
+      <ng-container matColumnDef="Description">
+        <th mat-header-cell *matHeaderCellDef><strong>Description</strong></th>
+        <td mat-cell *matCellDef="let row">{{row.Description}}</td>
+      </ng-container>
+      <ng-container matColumnDef="Content">
+        <th mat-header-cell *matHeaderCellDef><strong>Content</strong></th>
+        <td mat-cell *matCellDef="let row">{{row.Content}}</td>
+      </ng-container>
+    <ng-container matColumnDef="availability">
+      <th mat-header-cell *matHeaderCellDef> <strong>Availability </strong></th>
+      <td mat-cell *matCellDef="let row"> {{row.availability}} </td>
+    </ng-container>
+      <ng-container matColumnDef= "actions">
+        <th mat-header-cell *matHeaderCellDef><strong>Action</strong>  </th>
+         <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="primary" (click)="editbookid(element.id)">
+            <mat-icon>update</mat-icon></button>
+            <button mat-icon-button color="accent" (click)="ondelete(element.id)">
+              <mat-icon  [routerLink]= "['/admin']">delete</mat-icon>
+          </button>
+        </td> 
+    </ng-container>
+
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons 
+                 aria-label="Select page of periodic elements">
+  </mat-paginator> -->
+    <a mat-flat-button color="primary" [routerLink]="['/add']"><mat-icon>add</mat-icon></a>&nbsp;&nbsp;
+    <button mat-raised-button color="primary" routerLink="/login">Logout</button>
+    </div>
+    </div>
+   
+  </div>

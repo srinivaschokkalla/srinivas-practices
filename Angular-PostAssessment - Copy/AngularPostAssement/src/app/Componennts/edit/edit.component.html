@@ -1,0 +1,61 @@
+<div class="example-container mat-elevation-z8">
+
+    <mat-card class="example-card">
+        <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <input matInput placeholder="Enter Book id" formControlName="id" [(ngModel)]="user.id">
+                <mat-error>
+                    <span *ngIf="!empForm.get('id')?.valid && empForm.get('id')?.touched">Id Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Enter Name" formControlName="Name" [(ngModel)]="user.Name">
+                <mat-error>
+                    <span *ngIf="!empForm.get('Name')?.valid && empForm.get('Name')?.touched">Name Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput formControlName="Genere" placeholder="Enter Genere" [(ngModel)]="user.Genere">
+                <mat-error>
+                    <span *ngIf="!empForm.get('Genere')?.valid && empForm.get('Genere')?.touched">Genere
+                        Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Enter AuthorName " formControlName="AuthorName"
+                    [(ngModel)]="user.AuthorName">
+                <mat-error>
+                    <span *ngIf="!empForm.get('AuthorName')?.valid && empForm.get('AuthorName')?.touched">AuthorName
+                        Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput formControlName="Description" placeholder="Enter Description" [(ngModel)]="user.Description">
+                <mat-error>
+                    <span *ngIf="!empForm.get('Description')?.valid && empForm.get('Description')?.touched">Description
+                        Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput formControlName="Content" placeholder="Enter Content" [(ngModel)]="user.Content">
+                <mat-error>
+                    <span *ngIf="!empForm.get('Content')?.valid && empForm.get('Content')?.touched"> Content
+                        Required</span>
+                </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field>
+                <input matInput formControlName="availability" placeholder="Enter Availability" [(ngModel)]="user.availability">
+                <mat-error>
+                    <span *ngIf="!empForm.get('availability')?.valid && empForm.get('availability')?.touched"> Availability
+                        Required</span>
+                </mat-error>
+            </mat-form-field>
+            <div class="button-row">
+                <button mat-flat-button color="primary" type="submit" [disabled]="!empForm.valid">
+                    <mat-icon [routerLink]= "['/admin']">save</mat-icon>
+                </button>
+            </div>
+        </form>
+    </mat-card>
+</div>

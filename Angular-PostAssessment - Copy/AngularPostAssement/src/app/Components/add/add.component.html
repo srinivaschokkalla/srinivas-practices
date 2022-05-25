@@ -1,0 +1,53 @@
+<div class="example-container mat-elevation-z8">
+    <div class="example-loading-shade">
+    </div>
+    <mat-card class="example-card">
+        <form [formGroup]="empForm" (ngSubmit)="onSubmit(empForm.value)">
+            <mat-form-field>
+                <input matInput placeholder="Enter Employee Id" formControlName="Id">
+                <mat-error>
+                    <span *ngIf="!empForm.get('Id')?.valid && empForm.get('Id')?.touched">Id Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Enter Book Name" formControlName="Name">
+                <mat-error>
+                    <span *ngIf="!empForm.get('Name')?.valid && empForm.get('Name')?.touched">Name Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput  placeholder="Enter genre Name" formControlName="Genere">
+                <mat-error>
+                    <span *ngIf="!empForm.get('Genere')?.valid && empForm.get('Genere')?.touched">Genere Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Enter Author" formControlName="AuthorName">
+                <mat-error>
+                    <span *ngIf="!empForm.get('AuthorName')?.valid && empForm.get('AuthorName')?.touched">AuthorName Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput  placeholder="Enter Description" formControlName="Description">
+                <mat-error>
+                    <span *ngIf="!empForm.get('Description')?.valid && empForm.get('Description')?.touched"> Description Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Enter Content"  formControlName="Content">
+                <mat-error>
+                    <span *ngIf="!empForm.get('Content')?.valid && empForm.get('Content')?.touched"> Content Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Enter Availability"  formControlName="availability">
+                <mat-error>
+                    <span *ngIf="!empForm.get('availability')?.valid && empForm.get('availability')?.touched"> Availability Required</span>
+                </mat-error>
+            </mat-form-field>
+            <div class="button-row">
+                <button mat-flat-button color="primary" type="submit" [disabled]="!empForm.valid"><mat-icon [routerLink]= "['/admin']">save</mat-icon></button>
+            </div>
+        </form>
+    </mat-card>
+    </div>

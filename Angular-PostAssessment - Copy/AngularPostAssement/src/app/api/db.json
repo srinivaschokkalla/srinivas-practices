@@ -1,0 +1,80 @@
+{
+  "user": [
+    {
+      "id": 2001,
+      "email": "Admin",
+      "password": "srinivas",
+      "role": 1
+    },
+    {
+      "id": 2002,
+      "email": "user",
+      "password": "srinivas",
+      "role": 2
+    }
+  ],
+  "Books": [
+    {
+      "Id": "1",
+      "Name": "srinivas",
+      "Genere": "raju",
+      "AuthorName": "mohan",
+      "Description": "sfsfsf",
+      "Content": "zvzvzvzvz",
+      "availability": "12",
+      "id": 1
+    },
+    {
+      "Id": "hjgk",
+      "Name": "kumar",
+      "Genere": "lljl",
+      "AuthorName": "hlhl",
+      "Description": "hkhl",
+      "Content": "khk",
+      "availability": "lllj",
+      "id": 2
+    }
+  ],
+  "requestbooks": [
+    {
+      "Id": "hjgk",
+      "Name": "kumar",
+      "Genere": "lljl",
+      "AuthorName": "hlhl",
+      "Description": "hkhl",
+      "Content": "khk",
+      "availability": "lllj",
+      "id": 2
+    },
+    {
+      "Id": "3",
+      "Name": "mohan",
+      "Genere": "raju",
+      "AuthorName": "secu",
+      "Description": "hyd",
+      "Content": "bangalore",
+      "availability": "15",
+      "id": 3
+    },
+    {
+      "Id": "4",
+      "Name": "JHH",
+      "Genere": "HL",
+      "AuthorName": "H",
+      "Description": "75",
+      "Content": "HL",
+      "availability": "H",
+      "id": 4
+    },
+    {
+      "Id": "1",
+      "Name": "srinivas",
+      "Genere": "raju",
+      "AuthorName": "dfdf",
+      "Description": "sfsfsf",
+      "Content": "zvzvzvzvz",
+      "availability": "12",
+      "id": 1
+    }
+  ]
+}

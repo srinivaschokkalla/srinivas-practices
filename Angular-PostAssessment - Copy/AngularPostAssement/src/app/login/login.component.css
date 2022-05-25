@@ -1,0 +1,16 @@
+
+      mat-card {
+        max-width: 400px;
+        margin: 2em auto;
+        text-align: center;
+        margin-top: 15%;
+        background-color:aquamarine;
+      }
+      
+      mat-form-field {
+        display: block;
+      }
+      /* .container{
+        background-color: darkgreen;
+        margin: auto;
+      } */
